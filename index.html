@@ -126,7 +126,7 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=2000&q=80');
+    background-image: url('images/DSC05086.jpg');
     background-size: cover;
     background-position: center;
     filter: brightness(0.92);
@@ -693,8 +693,10 @@
       border-bottom: 1px solid var(--color-line);
     }
     nav ul.open { transform: translateY(0); }
+    nav a { font-size: 1rem; letter-spacing: 0.08em; font-family: var(--font-serif-jp); }
     .menu-toggle { display: block; }
     section { padding: 5rem 1.5rem; }
+    body { font-weight: 400; }
     .concept-grid,
     .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     .services-grid,
@@ -703,10 +705,16 @@
     .process-steps { grid-template-columns: repeat(2, 1fr); gap: 3rem 1.5rem; }
     .process-steps::before { display: none; }
     .concept-image::before { display: none; }
+    .service-card p, .step p, .testimonial p { font-size: 0.95rem; line-height: 1.9; }
+    .section-subtitle { font-size: 0.95rem; }
   }
   @media (max-width: 500px) {
     .gallery-grid { grid-template-columns: 1fr; }
     .form-row-split { grid-template-columns: 1fr; }
+    section { padding: 4rem 1.25rem; }
+    .hero p { font-size: 0.95rem; }
+    .contact-cta .btn { font-size: 0.95rem; letter-spacing: 0.1em; }
+    .step h4 { font-size: 1.05rem; }
   }
 </style>
 </head>
@@ -721,12 +729,12 @@
     </button>
     <nav>
       <ul id="navMenu">
-        <li><a href="#concept">Concept</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#voice">Voice</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#concept">コンセプト</a></li>
+        <li><a href="#services">料金・プラン</a></li>
+        <li><a href="#gallery">ギャラリー</a></li>
+        <li><a href="#process">撮影の流れ</a></li>
+        <li><a href="#voice">お客様の声</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
       </ul>
     </nav>
   </div>
@@ -740,7 +748,7 @@
     <div class="hero-eyebrow">Newborn &middot; Maternity &middot; Family</div>
     <h1>やわらかな光に包まれた、<br><em>一生に一度</em> の物語を。</h1>
     <p>はじめまして、ニューボーン・マタニティフォトグラファーの<br>鈴木 さくらです。ご家族の大切な瞬間を、丁寧に。</p>
-    <a href="#contact" class="btn">Book a Session</a>
+    <a href="https://lin.ee/pyeHEsZ" target="_blank" class="btn">公式LINEで予約する</a>
   </div>
 </section>
 
@@ -749,7 +757,7 @@
   <div class="container">
     <div class="concept-grid">
       <div class="concept-image reveal">
-        <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=800&q=80" alt="ニューボーンフォト">
+        <img src="images/DSC04134.jpg" alt="ニューボーンフォト">
       </div>
       <div class="concept-text reveal">
         <div class="section-eyebrow" style="text-align:left;">About Me</div>
@@ -780,7 +788,7 @@
         <h3>Maternity</h3>
         <span class="jp">マタニティフォト</span>
         <p>妊娠8〜9ヶ月頃がおすすめです。お腹の丸みが美しく、ママの穏やかな表情を柔らかな自然光の中で撮影します。</p>
-        <div class="price"><small>PLAN A</small>¥38,000〜</div>
+        <div class="price"><small>PLAN A</small>¥19,800〜</div>
       </div>
 
       <div class="service-card reveal">
@@ -792,7 +800,7 @@
         <h3>Newborn</h3>
         <span class="jp">ニューボーンフォト</span>
         <p>生後14〜28日頃の新生児期限定の撮影。赤ちゃんの安全を第一に、経験豊富なフォトグラファーが丁寧にポージングします。</p>
-        <div class="price"><small>PLAN B</small>¥48,000〜</div>
+        <div class="price"><small>PLAN B</small>¥26,000〜</div>
       </div>
 
       <div class="service-card reveal">
@@ -804,8 +812,8 @@
         </svg>
         <h3>Family</h3>
         <span class="jp">ファミリーフォト</span>
-        <p>ご兄弟・ご両親を含めたご家族全員での撮影。記念日や季節の節目に、ご自宅や公園など思い出の場所で。</p>
-        <div class="price"><small>PLAN C</small>¥42,000〜</div>
+        <p>七五三・お宮参りなど、特別な節目をご家族の大切な記念として残します。衣装・場所のご相談もお気軽に。</p>
+        <div class="price"><small>PLAN C</small>¥30,000〜</div>
       </div>
     </div>
   </div>
@@ -827,31 +835,31 @@
 
     <div class="gallery-grid" id="galleryGrid">
       <div class="gallery-item reveal" data-cat="newborn">
-        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=700&q=80" alt="newborn 1">
-      </div>
-      <div class="gallery-item reveal" data-cat="maternity">
-        <img src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?auto=format&fit=crop&w=700&q=80" alt="maternity 1">
-      </div>
-      <div class="gallery-item reveal" data-cat="family">
-        <img src="https://images.unsplash.com/photo-1607352094301-0db8a7e50441?auto=format&fit=crop&w=700&q=80" alt="family 1">
+        <img src="images/DSC04728.jpg" alt="ニューボーン 1">
       </div>
       <div class="gallery-item reveal" data-cat="newborn">
-        <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=700&q=80" alt="newborn 2">
-      </div>
-      <div class="gallery-item reveal" data-cat="maternity">
-        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=700&q=80" alt="maternity 2">
-      </div>
-      <div class="gallery-item reveal" data-cat="family">
-        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=700&q=80" alt="family 2">
+        <img src="images/DSC04757.jpg" alt="ニューボーン 2">
       </div>
       <div class="gallery-item reveal" data-cat="newborn">
-        <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=700&q=80" alt="newborn 3">
+        <img src="images/DSC04762.jpg" alt="ニューボーン 3">
       </div>
-      <div class="gallery-item reveal" data-cat="maternity">
-        <img src="https://images.unsplash.com/photo-1581952976147-5a2d15560349?auto=format&fit=crop&w=700&q=80" alt="maternity 3">
+      <div class="gallery-item reveal" data-cat="newborn">
+        <img src="images/DSC04966.jpg" alt="ニューボーン 4">
       </div>
-      <div class="gallery-item reveal" data-cat="family">
-        <img src="https://images.unsplash.com/photo-1581952976147-5a2d15560349?auto=format&fit=crop&w=700&q=80" alt="family 3">
+      <div class="gallery-item reveal" data-cat="newborn">
+        <img src="images/DSC04997.jpg" alt="ニューボーン 5">
+      </div>
+      <div class="gallery-item reveal" data-cat="newborn">
+        <img src="images/DSC05103.jpg" alt="ニューボーン 6">
+      </div>
+      <div class="gallery-item reveal" data-cat="newborn">
+        <img src="images/DSC05120.jpg" alt="ニューボーン 7">
+      </div>
+      <div class="gallery-item reveal" data-cat="newborn">
+        <img src="images/DSC05140.jpg" alt="ニューボーン 8">
+      </div>
+      <div class="gallery-item reveal" data-cat="newborn">
+        <img src="images/DSC05160.jpg" alt="ニューボーン 9">
       </div>
     </div>
   </div>
@@ -867,23 +875,23 @@
     <div class="process-steps">
       <div class="step reveal">
         <div class="step-number">i</div>
-        <h4>Inquiry</h4>
-        <p>お問い合わせフォームよりご希望の撮影プランとご予定日をお知らせください。</p>
+        <h4>お問い合わせ</h4>
+        <p>LINE公式アカウントよりご希望の撮影プランとご予定日をお知らせください。</p>
       </div>
       <div class="step reveal">
         <div class="step-number">ii</div>
-        <h4>Consultation</h4>
-        <p>撮影内容・衣装・ロケーションについて、オンラインで事前に打ち合わせを行います。</p>
+        <h4>ご相談</h4>
+        <p>撮影内容・衣装・ロケーションについて、LINEで事前にご相談いたします。</p>
       </div>
       <div class="step reveal">
         <div class="step-number">iii</div>
-        <h4>Session</h4>
-        <p>当日はご自宅やスタジオで2〜3時間ほど、赤ちゃんとママのペースで撮影します。</p>
+        <h4>撮影当日</h4>
+        <p>ご自宅や屋外で、お子さまとご家族のペースに合わせてゆっくり撮影します。</p>
       </div>
       <div class="step reveal">
         <div class="step-number">iv</div>
-        <h4>Delivery</h4>
-        <p>約3週間後、丁寧にセレクト・レタッチしたお写真をオンラインギャラリーにて納品いたします。</p>
+        <h4>データ納品</h4>
+        <p>約3週間後、丁寧にセレクト・レタッチしたお写真をオンラインにて納品いたします。</p>
       </div>
     </div>
   </div>
@@ -941,9 +949,9 @@
       </div>
 
       <div class="contact-cta reveal">
-        <p>お問い合わせ・ご相談はLINE公式アカウントからお気軽にどうぞ。ご予約はこちらのフォームからもお申し込みいただけます。</p>
-        <a href="https://lin.ee/pyeHEsZ" target="_blank" class="btn btn-filled">公式LINEはこちら</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgPky_EWSYwgP_K92bhUUB8d_KcIKR798cyGHvo0OZWGuS3g/viewform?usp=header" target="_blank" class="btn btn-dark">ご予約はこちら</a>
+        <p>ご予約・お問い合わせはすべてLINE公式アカウントにて承っております。まずはお気軽にメッセージをお送りください。</p>
+        <a href="https://lin.ee/pyeHEsZ" target="_blank" class="btn btn-filled">公式LINEで予約・相談する</a>
+        <p style="font-size:0.82rem;color:var(--color-text-soft);margin-top:1.25rem;text-align:center;line-height:1.8;">LINEアプリをお持ちでない方は<br>QRコードで友だち追加いただけます</p>
       </div>
     </div>
   </div>
