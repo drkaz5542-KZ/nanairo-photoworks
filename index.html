@@ -452,50 +452,50 @@
   .process-steps {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 0;
     position: relative;
-  }
-  .process-steps::before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    left: 10%;
-    right: 10%;
-    height: 1px;
-    background: var(--color-line);
-    z-index: 0;
   }
   .step {
     text-align: center;
     position: relative;
-    z-index: 1;
+    padding: 0 1.5rem;
   }
-  .step-number {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: var(--color-bg-alt);
-    border: 1px solid var(--color-accent);
+  .step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 68px;
+    right: -1px;
+    width: 1px;
+    height: 40px;
+    background: var(--color-line);
+  }
+  .step-illustration {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.25rem;
     color: var(--color-accent);
+  }
+  .step-label {
     font-family: var(--font-serif-en);
-    font-size: 1.3rem;
-    font-style: italic;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    opacity: 0.7;
+    margin-bottom: 0.6rem;
+    display: block;
   }
   .step h4 {
-    font-family: var(--font-serif-en);
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.05em;
+    font-family: var(--font-serif-jp);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.08em;
   }
   .step p {
     font-size: 0.85rem;
     color: var(--color-text-soft);
-    line-height: 1.8;
+    line-height: 1.9;
   }
 
   /* ===== Testimonials ===== */
@@ -726,8 +726,8 @@
     .services-grid,
     .testimonials-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .process-steps { grid-template-columns: repeat(2, 1fr); gap: 3rem 1.5rem; }
-    .process-steps::before { display: none; }
+    .process-steps { grid-template-columns: repeat(2, 1fr); gap: 3rem 0; }
+    .step:not(:last-child)::after { display: none; }
     .concept-image::before { display: none; }
     .service-card p, .step p, .testimonial p { font-size: 0.95rem; line-height: 1.9; }
     .section-subtitle { font-size: 0.95rem; }
@@ -899,26 +899,86 @@
     <p class="section-subtitle">ご予約から納品まで、安心してお任せいただけるよう丁寧にサポートいたします。</p>
 
     <div class="process-steps">
+
+      <!-- Step 1: お問い合わせ -->
       <div class="step reveal">
-        <div class="step-number">i</div>
+        <svg class="step-illustration" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- スマートフォン -->
+          <rect x="33" y="18" width="34" height="54" rx="4"/>
+          <line x1="44" y1="24" x2="56" y2="24"/>
+          <circle cx="50" cy="65" r="2.5"/>
+          <!-- チャットバブル -->
+          <path d="M38 35 Q38 30 43 30 H63 Q68 30 68 35 V44 Q68 49 63 49 H55 L50 54 L50 49 H43 Q38 49 38 44 Z" stroke-width="1"/>
+          <line x1="44" y1="37" x2="62" y2="37"/>
+          <line x1="44" y1="42" x2="56" y2="42"/>
+        </svg>
+        <span class="step-label">Step 01</span>
         <h4>お問い合わせ</h4>
         <p>LINE公式アカウントよりご希望の撮影プランとご予定日をお知らせください。</p>
       </div>
+
+      <!-- Step 2: ご相談 -->
       <div class="step reveal">
-        <div class="step-number">ii</div>
+        <svg class="step-illustration" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- お茶のカップ -->
+          <path d="M28 48 Q28 68 50 68 Q72 68 72 48 L68 36 H32 Z"/>
+          <path d="M72 42 Q82 42 82 50 Q82 58 72 56"/>
+          <!-- ソーサー -->
+          <ellipse cx="50" cy="70" rx="26" ry="4"/>
+          <!-- 湯気 -->
+          <path d="M40 28 Q42 22 40 16" stroke-width="1"/>
+          <path d="M50 26 Q52 20 50 14" stroke-width="1"/>
+          <path d="M60 28 Q62 22 60 16" stroke-width="1"/>
+        </svg>
+        <span class="step-label">Step 02</span>
         <h4>ご相談</h4>
         <p>撮影内容・衣装・ロケーションについて、LINEで事前にご相談いたします。</p>
       </div>
+
+      <!-- Step 3: 撮影当日 -->
       <div class="step reveal">
-        <div class="step-number">iii</div>
+        <svg class="step-illustration" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- カメラボディ -->
+          <rect x="18" y="36" width="64" height="44" rx="5"/>
+          <!-- レンズ -->
+          <circle cx="50" cy="58" r="14"/>
+          <circle cx="50" cy="58" r="9"/>
+          <circle cx="50" cy="58" r="4"/>
+          <!-- ファインダー -->
+          <path d="M36 36 L40 26 H60 L64 36"/>
+          <!-- シャッターボタン -->
+          <circle cx="72" cy="30" r="5"/>
+          <!-- フラッシュ -->
+          <rect x="20" y="40" width="10" height="6" rx="1"/>
+        </svg>
+        <span class="step-label">Step 03</span>
         <h4>撮影当日</h4>
         <p>ご自宅や屋外で、お子さまとご家族のペースに合わせてゆっくり撮影します。</p>
       </div>
+
+      <!-- Step 4: データ納品 -->
       <div class="step reveal">
-        <div class="step-number">iv</div>
+        <svg class="step-illustration" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- 写真フレーム -->
+          <rect x="22" y="20" width="42" height="52" rx="2"/>
+          <rect x="26" y="24" width="34" height="26" rx="1"/>
+          <!-- 山と太陽（写真の中身） -->
+          <path d="M26 48 L36 36 L46 46 L50 40 L60 50" stroke-width="1"/>
+          <circle cx="55" cy="30" r="4" stroke-width="1"/>
+          <!-- テキスト行 -->
+          <line x1="26" y1="56" x2="52" y2="56"/>
+          <line x1="26" y1="62" x2="44" y2="62"/>
+          <!-- 下矢印＋納品イメージ -->
+          <line x1="72" y1="38" x2="72" y2="70"/>
+          <polyline points="64,62 72,72 80,62"/>
+          <!-- 下の台 -->
+          <line x1="62" y1="72" x2="82" y2="72"/>
+        </svg>
+        <span class="step-label">Step 04</span>
         <h4>データ納品</h4>
         <p>約3週間後、丁寧にセレクト・レタッチしたお写真をオンラインにて納品いたします。</p>
       </div>
+
     </div>
   </div>
 </section>
