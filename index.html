@@ -124,7 +124,7 @@
   .carousel {
     position: relative;
     overflow: hidden;
-    padding: 2rem 4rem;
+    padding: 2rem 0.5rem;
   }
   .carousel-track {
     position: relative;
@@ -190,10 +190,10 @@
   .carousel-prev svg,
   .carousel-next svg { width: 28px; height: 28px; }
   @media (max-width: 900px) {
-    .carousel { padding: 1.5rem 3rem; }
+    .carousel { padding: 1.5rem 0.5rem; }
   }
   @media (max-width: 500px) {
-    .carousel { padding: 1rem 2.5rem; }
+    .carousel { padding: 1rem 0.5rem; }
   }
   .btn {
     display: inline-block;
@@ -791,10 +791,7 @@
 <!-- ===== Concept ===== -->
 <section class="concept" id="concept">
   <div class="container">
-    <div class="concept-grid">
-      <div class="concept-image reveal">
-        <img src="images/DSC04134.jpg" alt="ニューボーンフォト">
-      </div>
+    <div class="concept-grid" style="grid-template-columns:1fr;max-width:700px;margin:0 auto;">
       <div class="concept-text reveal">
         <div class="section-eyebrow" style="text-align:left;">About Me</div>
         <h2>その瞬間にしかない、<br><em>いのちの美しさ</em> を残して。</h2>
@@ -885,7 +882,7 @@
         <img src="images/DSC05120.jpg" alt="ニューボーン 7">
       </div>
       <div class="gallery-item reveal" data-cat="newborn">
-        <img src="images/DSC05140.jpg" alt="ニューボーン 8">
+        <img src="images/DSC04134.jpg" alt="ニューボーン 8">
       </div>
       <div class="gallery-item reveal" data-cat="newborn">
         <img src="images/DSC05160.jpg" alt="ニューボーン 9">
