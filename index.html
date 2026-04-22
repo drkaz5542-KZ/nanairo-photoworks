@@ -116,33 +116,21 @@
   /* ===== Hero ===== */
   .hero {
     position: relative;
-    height: 100vh;
-    min-height: 620px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    padding-top: 72px;
   }
   .hero-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url('images/DSC05086.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.92);
+    width: 100%;
+    max-height: 90vh;
+    object-fit: cover;
+    display: block;
   }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(58, 51, 44, 0.15), rgba(58, 51, 44, 0.35));
-  }
+  .hero-overlay { display: none; }
   .hero-content {
-    position: relative;
-    z-index: 2;
     text-align: center;
-    color: #fff;
-    padding: 0 1.5rem;
+    color: var(--color-text);
+    padding: 4rem 1.5rem 2rem;
     max-width: 780px;
+    margin: 0 auto;
   }
   .hero-eyebrow {
     font-family: var(--font-serif-en);
@@ -150,7 +138,7 @@
     letter-spacing: 0.4em;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-    opacity: 0.9;
+    color: var(--color-accent);
   }
   .hero h1 {
     font-family: var(--font-serif-en);
@@ -159,17 +147,19 @@
     line-height: 1.15;
     letter-spacing: 0.02em;
     margin-bottom: 1.5rem;
+    color: var(--color-text);
   }
   .hero h1 em {
     font-style: italic;
     font-weight: 400;
+    color: var(--color-accent);
   }
   .hero p {
     font-size: 1rem;
     letter-spacing: 0.1em;
     line-height: 2;
-    opacity: 0.95;
     margin-bottom: 2.5rem;
+    color: var(--color-text-soft);
   }
   .btn {
     display: inline-block;
@@ -742,13 +732,12 @@
 
 <!-- ===== Hero ===== -->
 <section class="hero" id="top">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
+  <img class="hero-bg" src="images/photo_05.jpg" alt="ニューボーンフォト">
   <div class="hero-content">
     <div class="hero-eyebrow">Newborn &middot; Maternity &middot; Family</div>
     <h1>やわらかな光に包まれた、<br><em>一生に一度</em> の物語を。</h1>
     <p>はじめまして、ニューボーン・マタニティフォトグラファーの<br>鈴木 さくらです。ご家族の大切な瞬間を、丁寧に。</p>
-    <a href="https://lin.ee/pyeHEsZ" target="_blank" class="btn">公式LINEで予約する</a>
+    <a href="https://lin.ee/pyeHEsZ" target="_blank" class="btn btn-dark">公式LINEで予約する</a>
   </div>
 </section>
 
