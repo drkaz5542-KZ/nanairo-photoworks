@@ -67,7 +67,7 @@
   }
   .brand {
     font-family: var(--font-serif-jp);
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     color: var(--color-text);
@@ -84,7 +84,7 @@
   }
   nav a {
     font-family: var(--font-serif-en);
-    font-size: 0.95rem;
+    font-size: 0.78rem;
     letter-spacing: 0.2em;
     color: var(--color-text);
     text-transform: uppercase;
@@ -113,53 +113,87 @@
   .menu-toggle.open span:nth-child(2) { opacity: 0; }
   .menu-toggle.open span:nth-child(3) { top: 12px; transform: rotate(-45deg); }
 
-  /* ===== Hero ===== */
+  /* ===== Hero Carousel ===== */
   .hero {
     position: relative;
-    padding: 72px 0 0;
-  }
-  .hero-bg {
-    width: 100%;
-    max-height: 90vh;
-    object-fit: cover;
-    display: block;
+    padding-top: 72px;
+    background: var(--color-bg);
   }
   .hero-overlay { display: none; }
-  .hero-content {
-    text-align: center;
-    color: var(--color-text);
-    padding: 4rem 1.5rem 2rem;
-    max-width: 780px;
-    margin: 0 auto;
+  .hero-content { display: none; }
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 4rem;
   }
-  .hero-eyebrow {
-    font-family: var(--font-serif-en);
-    font-size: 0.9rem;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    color: var(--color-accent);
+  .carousel-track {
+    position: relative;
   }
-  .hero h1 {
-    font-family: var(--font-serif-en);
-    font-size: clamp(2.4rem, 5.5vw, 4.5rem);
-    font-weight: 300;
-    line-height: 1.15;
-    letter-spacing: 0.02em;
-    margin-bottom: 1.5rem;
-    color: var(--color-text);
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    pointer-events: none;
   }
-  .hero h1 em {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--color-accent);
+  .carousel-slide.active {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
   }
-  .hero p {
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-    line-height: 2;
-    margin-bottom: 2.5rem;
+  .carousel-slide img {
+    max-height: 80vh;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1.25rem 0 1.5rem;
+  }
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-line);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s ease;
+  }
+  .carousel-dot.active {
+    background: var(--color-accent);
+  }
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
     color: var(--color-text-soft);
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    z-index: 2;
+  }
+  .carousel-prev { left: 0.5rem; }
+  .carousel-next { right: 0.5rem; }
+  .carousel-prev:hover,
+  .carousel-next:hover { color: var(--color-accent); }
+  .carousel-prev svg,
+  .carousel-next svg { width: 28px; height: 28px; }
+  @media (max-width: 900px) {
+    .carousel { padding: 1.5rem 3rem; }
+  }
+  @media (max-width: 500px) {
+    .carousel { padding: 1rem 2.5rem; }
   }
   .btn {
     display: inline-block;
@@ -719,12 +753,12 @@
     </button>
     <nav>
       <ul id="navMenu">
-        <li><a href="#concept">コンセプト</a></li>
+        <li><a href="#concept">About Me</a></li>
         <li><a href="#services">料金・プラン</a></li>
         <li><a href="#gallery">ギャラリー</a></li>
         <li><a href="#process">撮影の流れ</a></li>
         <li><a href="#voice">お客様の声</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="#contact">ご予約・お問い合わせ</a></li>
       </ul>
     </nav>
   </div>
@@ -732,7 +766,26 @@
 
 <!-- ===== Hero ===== -->
 <section class="hero" id="top">
-  <img class="hero-bg" src="images/photo_05.jpg" alt="ニューボーンフォト">
+  <div class="carousel" id="heroCarousel">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide"><img src="images/photo_01.jpg" alt="フォト 1"></div>
+      <div class="carousel-slide"><img src="images/photo_02.jpg" alt="フォト 2"></div>
+      <div class="carousel-slide"><img src="images/photo_04.jpg" alt="フォト 4"></div>
+      <div class="carousel-slide"><img src="images/photo_05.jpg" alt="フォト 5"></div>
+      <div class="carousel-slide"><img src="images/photo_06.jpg" alt="フォト 6"></div>
+      <div class="carousel-slide"><img src="images/photo_07.jpg" alt="フォト 7"></div>
+      <div class="carousel-slide"><img src="images/photo_08.jpg" alt="フォト 8"></div>
+      <div class="carousel-slide"><img src="images/photo_09.jpg" alt="フォト 9"></div>
+      <div class="carousel-slide"><img src="images/photo_10.jpg" alt="フォト 10"></div>
+    </div>
+    <button class="carousel-prev" id="carouselPrev" aria-label="前へ">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="carousel-next" id="carouselNext" aria-label="次へ">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
 </section>
 
 <!-- ===== Concept ===== -->
@@ -808,13 +861,6 @@
     <div class="section-eyebrow">Gallery</div>
     <h2 class="section-title">ギャラリー</h2>
     <p class="section-subtitle">これまでに撮影させていただいたご家族の、ほんの一部をご紹介します。</p>
-
-    <div class="gallery-filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="maternity">Maternity</button>
-      <button class="filter-btn" data-filter="newborn">Newborn</button>
-      <button class="filter-btn" data-filter="family">Family</button>
-    </div>
 
     <div class="gallery-grid" id="galleryGrid">
       <div class="gallery-item reveal" data-cat="newborn">
@@ -922,7 +968,7 @@
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            大阪府・和歌山県・兵庫県・京都府・奈良県<br>(出張撮影エリア)
+            大阪府・和歌山県・兵庫県<br>(出張撮影エリア)
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
@@ -958,6 +1004,44 @@
 </footer>
 
 <script>
+  // ===== Hero Carousel =====
+  (function() {
+    const track = document.getElementById('carouselTrack');
+    const dotsContainer = document.getElementById('carouselDots');
+    const slides = track.querySelectorAll('.carousel-slide');
+    const total = slides.length;
+    let current = 0;
+    let timer;
+
+    slides[0].classList.add('active');
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      current = (index + total) % total;
+      slides[current].classList.add('active');
+      dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    function startAuto() {
+      timer = setInterval(() => goTo(current + 1), 12000);
+    }
+    function stopAuto() { clearInterval(timer); }
+
+    document.getElementById('carouselPrev').addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+    document.getElementById('carouselNext').addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
+
+    startAuto();
+  })();
+
   // ===== Header scroll effect =====
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
