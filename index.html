@@ -508,31 +508,44 @@
   }
 
   /* ===== Testimonials ===== */
-  .testimonials {
-    background: var(--color-bg);
-  }
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-  }
-  .testimonial {
+  .testimonials { background: var(--color-bg); }
+  .rating-summary { text-align: center; margin-bottom: 3.5rem; }
+  .rating-score-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
     background: var(--color-bg-alt);
-    padding: 2.5rem 2rem;
+    padding: 1.5rem 3rem;
+    border: 1px solid var(--color-line);
+  }
+  .rating-number {
+    font-family: var(--font-serif-en);
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color-text);
+    line-height: 1;
+  }
+  .rating-right { text-align: left; }
+  .rating-stars { color: var(--color-accent); font-size: 1.3rem; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
+  .rating-count { font-size: 0.85rem; color: var(--color-text-soft); letter-spacing: 0.1em; }
+  .testimonial-featured {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    background: var(--color-bg-alt);
+    padding: 2.5rem 2.5rem 2rem;
     position: relative;
   }
-  .testimonial::before {
-    content: '"';
+  .testimonial-featured::before {
+    content: '\201C';
     position: absolute;
-    top: 10px;
-    left: 20px;
+    top: 10px; left: 20px;
     font-family: var(--font-serif-en);
     font-size: 5rem;
     line-height: 1;
     color: var(--color-accent);
     opacity: 0.3;
   }
-  .testimonial p {
+  .testimonial-featured p {
     font-size: 0.9rem;
     color: var(--color-text-soft);
     line-height: 2;
@@ -540,12 +553,11 @@
     position: relative;
     z-index: 1;
   }
-  .testimonial .author {
+  .testimonial-featured .author {
     font-family: var(--font-serif-en);
     font-style: italic;
     color: var(--color-accent);
     font-size: 0.95rem;
-    letter-spacing: 0.05em;
   }
 
   /* ===== Contact ===== */
@@ -1002,19 +1014,23 @@
     <h2 class="section-title">お客様の声</h2>
     <p class="section-subtitle">撮影を通じて、たくさんのご家族と素敵な時間を過ごさせていただいています。</p>
 
-    <div class="testimonials-grid">
-      <div class="testimonial reveal">
-        <p>新生児期しか撮れない表情を、驚くほど自然に引き出してくださいました。赤ちゃんへの優しい声かけと配慮が本当に安心で、家族の宝物になる一枚に出会えました。</p>
-        <div class="author">— M.K 様 &middot; 東京都</div>
+    <div class="rating-summary reveal">
+      <div class="rating-score-wrap">
+        <span class="rating-number">4.8</span>
+        <div class="rating-right">
+          <div class="rating-stars">★★★★★</div>
+          <div class="rating-count">41件の口コミ平均</div>
+        </div>
       </div>
-      <div class="testimonial reveal">
-        <p>マタニティフォトは少し恥ずかしさもありましたが、リラックスできる雰囲気作りが上手で、自然体の写真をたくさん撮っていただきました。夫も大満足です。</p>
-        <div class="author">— A.S 様 &middot; 神奈川県</div>
-      </div>
-      <div class="testimonial reveal">
-        <p>第二子の誕生に合わせて家族写真を。上の子の表情もとても自然で、写真を見るたびに涙が出そうになります。丁寧なレタッチも含めて、本当におすすめです。</p>
-        <div class="author">— Y.T 様 &middot; 千葉県</div>
-      </div>
+    </div>
+
+    <div class="testimonial-featured reveal">
+      <p>ニューボーンフォトありがとうございました！新生児期だけの特別な写真を記念に残せて、大満足です！上の子がグズグズになってしまっても、根気よく声をかけてくださったり、本当に丁寧に接していただき、とても助かりました。感謝です。時間もちょうど良く、上の子もベビーも無理のないスケジュールでした。</p>
+      <div class="author">— 口コミ4 &middot; 大阪府</div>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="reviews.html" class="btn btn-dark">すべての口コミを見る</a>
     </div>
   </div>
 </section>
