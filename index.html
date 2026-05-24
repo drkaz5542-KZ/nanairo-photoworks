@@ -124,31 +124,31 @@
   .carousel {
     position: relative;
     overflow: hidden;
-    padding: 2rem 0.5rem;
+    height: 88vh;
   }
   .carousel-track {
     position: relative;
+    height: 100%;
   }
   .carousel-slide {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    height: 100%;
     opacity: 0;
     transition: opacity 0.9s ease;
     pointer-events: none;
   }
   .carousel-slide.active {
-    position: relative;
     opacity: 1;
     pointer-events: auto;
   }
   .carousel-slide img {
-    max-height: 80vh;
-    max-width: 100%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
   }
   .carousel-dots {
@@ -189,11 +189,8 @@
   .carousel-next:hover { color: var(--color-accent); }
   .carousel-prev svg,
   .carousel-next svg { width: 28px; height: 28px; }
-  @media (max-width: 900px) {
-    .carousel { padding: 1.5rem 0.5rem; }
-  }
   @media (max-width: 500px) {
-    .carousel { padding: 1rem 0.5rem; }
+    .carousel { height: 60vh; }
   }
   .btn {
     display: inline-block;
