@@ -124,7 +124,8 @@
   .carousel {
     position: relative;
     overflow: hidden;
-    height: 88vh;
+    width: 100%;
+    aspect-ratio: 4 / 3;
   }
   .carousel-track {
     position: relative;
@@ -190,7 +191,7 @@
   .carousel-prev svg,
   .carousel-next svg { width: 28px; height: 28px; }
   @media (max-width: 500px) {
-    .carousel { height: 60vh; }
+    .carousel { min-height: 260px; }
   }
   .btn {
     display: inline-block;
