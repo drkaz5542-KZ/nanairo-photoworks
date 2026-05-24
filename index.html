@@ -384,6 +384,19 @@
     display: block;
     margin-bottom: 0.3rem;
   }
+  .service-detail-link {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-family: var(--font-serif-en);
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    border-bottom: 1px solid var(--color-accent);
+    padding-bottom: 0.1rem;
+    transition: opacity 0.3s ease;
+  }
+  .service-detail-link:hover { opacity: 0.6; }
 
   /* ===== Gallery ===== */
   .gallery {
@@ -756,10 +769,12 @@
   @media (max-width: 500px) {
     .gallery-grid { grid-template-columns: 1fr; }
     .form-row-split { grid-template-columns: 1fr; }
-    section { padding: 4rem 1.25rem; }
+    section { padding: 4rem 1.5rem; }
     .hero p { font-size: 0.95rem; }
     .contact-cta .btn { font-size: 0.95rem; letter-spacing: 0.1em; }
     .step h4 { font-size: 1.05rem; }
+    .process-steps { grid-template-columns: 1fr; }
+    .rating-score-wrap { padding: 1.25rem 1.75rem; }
   }
 </style>
 </head>
@@ -854,7 +869,8 @@
         <h3>Maternity</h3>
         <span class="jp">マタニティフォト</span>
         <p>妊娠8〜9ヶ月頃がおすすめです。お腹の丸みが美しく、ママの穏やかな表情を柔らかな自然光の中で撮影します。</p>
-        <div class="price"><small>PLAN A</small>¥19,800〜</div>
+        <div class="price"><small>Plan</small>¥26,000〜</div>
+        <a href="plan-maternity.html" class="service-detail-link">詳細を見る →</a>
       </div>
 
       <div class="service-card reveal">
@@ -862,7 +878,8 @@
         <h3>Newborn</h3>
         <span class="jp">ニューボーンフォト</span>
         <p>生後28日頃までの新生児期限定の撮影。赤ちゃんの安全を第一に、経験豊富なフォトグラファーが丁寧にポージングします。</p>
-        <div class="price"><small>PLAN B</small>¥26,000〜</div>
+        <div class="price"><small>Plan</small>¥26,000〜</div>
+        <a href="plan-newborn.html" class="service-detail-link">詳細を見る →</a>
       </div>
 
       <div class="service-card reveal">
@@ -870,7 +887,8 @@
         <h3>Family</h3>
         <span class="jp">ファミリーフォト</span>
         <p>七五三・お宮参りなど、特別な節目をご家族の大切な記念として残します。衣装・場所のご相談もお気軽に。</p>
-        <div class="price"><small>PLAN C</small>¥30,000〜</div>
+        <div class="price"><small>Plan</small>¥30,000〜</div>
+        <a href="plan-family.html" class="service-detail-link">詳細を見る →</a>
       </div>
     </div>
   </div>

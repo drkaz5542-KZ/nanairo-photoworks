@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ニューボーンプラン | Nanairo Photoworks</title>
+<meta name="description" content="七彩 Photo Worksのニューボーンフォトプランをご紹介します。ミニ・ベーシック・プラチナの3プランをご用意しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #faf7f2;
+    --color-bg-alt: #f2ece3;
+    --color-text: #3a332c;
+    --color-text-soft: #6b5f54;
+    --color-accent: #a88968;
+    --color-accent-dark: #8a6e4f;
+    --color-line: #e2d8ca;
+    --font-serif-en: 'EB Garamond', serif;
+    --font-serif-jp: 'Shippori Mincho', serif;
+    --max-width: 1000px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-serif-jp); color: var(--color-text); background: var(--color-bg); line-height: 1.8; font-weight: 300; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; transition: opacity 0.3s ease; }
+  a:hover { opacity: 0.7; }
+
+  /* Header */
+  header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; background: rgba(250,247,242,0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color 0.3s ease, padding 0.3s ease; }
+  header.scrolled { border-bottom-color: var(--color-line); padding: 0.9rem 2rem; }
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-family: var(--font-serif-jp); font-size: 1.1rem; font-weight: 500; letter-spacing: 0.1em; }
+  .brand rt { font-size: 0.55em; letter-spacing: 0.05em; font-weight: 400; }
+  nav ul { list-style: none; display: flex; gap: 2.25rem; }
+  nav a { font-family: var(--font-serif-en); font-size: 0.78rem; letter-spacing: 0.2em; color: var(--color-text); text-transform: uppercase; }
+  nav a.current { color: var(--color-accent); }
+  .menu-toggle { display: none; background: none; border: none; cursor: pointer; width: 32px; height: 24px; position: relative; }
+  .menu-toggle span { position: absolute; left: 0; right: 0; height: 1px; background: var(--color-text); transition: all 0.3s ease; }
+  .menu-toggle span:nth-child(1) { top: 4px; }
+  .menu-toggle span:nth-child(2) { top: 12px; }
+  .menu-toggle span:nth-child(3) { top: 20px; }
+  .menu-toggle.open span:nth-child(1) { top: 12px; transform: rotate(45deg); }
+  .menu-toggle.open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.open span:nth-child(3) { top: 12px; transform: rotate(-45deg); }
+
+  /* Btn */
+  .btn { display: inline-block; padding: 1rem 2.5rem; font-family: var(--font-serif-en); font-size: 0.9rem; letter-spacing: 0.3em; text-transform: uppercase; border: 1px solid currentColor; background: transparent; cursor: pointer; transition: all 0.3s ease; }
+  .btn-filled { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+  .btn-filled:hover { background: var(--color-accent-dark); border-color: var(--color-accent-dark); color: #fff; opacity: 1; }
+
+  /* Page Hero */
+  .page-hero { padding: 130px 2rem 4rem; background: var(--color-bg); text-align: center; }
+  .section-eyebrow { font-family: var(--font-serif-en); font-size: 0.85rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 1rem; }
+  .page-title { font-family: var(--font-serif-en); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 400; margin-bottom: 0.5rem; letter-spacing: 0.02em; }
+  .page-title-jp { font-family: var(--font-serif-jp); font-size: 1rem; color: var(--color-text-soft); letter-spacing: 0.15em; }
+
+  /* Main */
+  .plan-section { padding: 3rem 2rem 5rem; }
+  .container { max-width: var(--max-width); margin: 0 auto; }
+
+  /* Plan Grid – 3 columns */
+  .plan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; align-items: start; }
+  .plan-card { background: #fff; border: 1px solid var(--color-line); padding: 2rem 1.5rem; position: relative; }
+  .plan-card.recommended { border-color: var(--color-accent); }
+  .recommended-badge { position: absolute; top: -1px; right: 1.5rem; background: var(--color-accent); color: #fff; font-family: var(--font-serif-en); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.3rem 0.8rem; }
+  .plan-name { font-family: var(--font-serif-jp); font-size: 1.3rem; font-weight: 500; color: var(--color-accent); margin-bottom: 0.3rem; }
+  .plan-tagline { font-size: 0.8rem; color: var(--color-text-soft); margin-bottom: 1.25rem; line-height: 1.6; }
+  .plan-price { font-family: var(--font-serif-en); font-size: 2rem; font-weight: 400; color: var(--color-text); margin-bottom: 0.3rem; line-height: 1; }
+  .plan-price small { font-size: 0.75rem; font-family: var(--font-serif-jp); color: var(--color-text-soft); }
+  .plan-divider { border: none; border-top: 1px solid var(--color-line); margin: 1.25rem 0; }
+  .plan-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .plan-features li { font-size: 0.86rem; color: var(--color-text-soft); padding-left: 1.2rem; position: relative; line-height: 1.6; }
+  .plan-features li::before { content: '・'; position: absolute; left: 0; color: var(--color-accent); }
+  .coupon-note { font-size: 0.78rem; color: var(--color-accent); margin-top: 0.75rem; padding-left: 1.2rem; }
+
+  /* Common */
+  .common-section { background: var(--color-bg-alt); border: 1px solid var(--color-line); padding: 2rem 2.5rem; margin-bottom: 3rem; }
+  .common-title { font-family: var(--font-serif-jp); font-size: 1rem; font-weight: 500; color: var(--color-accent); margin-bottom: 1rem; letter-spacing: 0.1em; }
+  .common-features { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .common-features li { font-size: 0.88rem; color: var(--color-text-soft); padding-left: 1.2rem; position: relative; }
+  .common-features li::before { content: '・'; position: absolute; left: 0; color: var(--color-accent); }
+
+  /* Options Table */
+  .options-section { margin-bottom: 3rem; }
+  .options-title { font-family: var(--font-serif-jp); font-size: 1rem; font-weight: 500; color: var(--color-text); margin-bottom: 1rem; letter-spacing: 0.1em; }
+  .options-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .options-table th, .options-table td { padding: 0.8rem 1rem; border: 1px solid var(--color-line); text-align: left; }
+  .options-table th { background: var(--color-bg-alt); color: var(--color-text-soft); font-weight: 400; font-size: 0.8rem; letter-spacing: 0.05em; width: 60%; }
+  .options-table td { color: var(--color-accent); font-family: var(--font-serif-en); font-size: 0.95rem; }
+
+  /* CTA */
+  .plan-cta { text-align: center; padding: 3rem 2rem; background: var(--color-bg-alt); }
+  .plan-cta p { color: var(--color-text-soft); margin-bottom: 2rem; font-size: 0.95rem; }
+
+  /* Footer */
+  footer { background: #3a332c; color: #d6cfc5; padding: 4rem 2rem 2rem; text-align: center; }
+  .footer-brand { font-family: var(--font-serif-jp); font-size: 1.8rem; letter-spacing: 0.15em; color: #fff; margin-bottom: 0.5rem; }
+  .footer-brand rt { font-size: 0.5em; letter-spacing: 0.05em; opacity: 0.8; }
+  .footer-social { display: flex; justify-content: center; gap: 1.5rem; margin: 2rem 0; }
+  .footer-social a { width: 40px; height: 40px; border: 1px solid #6b5f54; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #d6cfc5; transition: all 0.3s ease; }
+  .footer-social a:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; opacity: 1; }
+  .footer-social svg { width: 18px; height: 18px; }
+  .copyright { font-family: var(--font-serif-en); font-size: 0.8rem; letter-spacing: 0.2em; opacity: 0.6; padding-top: 2rem; border-top: 1px solid #5a5148; margin-top: 2rem; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    nav ul { position: fixed; top: 60px; left: 0; right: 0; background: rgba(250,247,242,0.98); backdrop-filter: blur(10px); flex-direction: column; padding: 2rem; gap: 1.5rem; transform: translateY(-120%); transition: transform 0.4s ease; border-bottom: 1px solid var(--color-line); }
+    nav ul.open { transform: translateY(0); }
+    nav a { font-size: 1rem; letter-spacing: 0.08em; font-family: var(--font-serif-jp); }
+    .menu-toggle { display: block; }
+    .page-hero { padding: 100px 1.5rem 3rem; }
+    .plan-section { padding: 3rem 1.5rem 5rem; }
+    .plan-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .plan-section { padding: 3rem 1.5rem 4rem; }
+    .common-section { padding: 1.5rem; }
+    .options-table th, .options-table td { padding: 0.65rem 0.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><ruby>七彩<rt>なないろ</rt></ruby> Photo Works</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="menu"><span></span><span></span><span></span></button>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="index.html#concept">About Me</a></li>
+        <li><a href="index.html#services" class="current">料金・プラン</a></li>
+        <li><a href="index.html#gallery">ギャラリー</a></li>
+        <li><a href="index.html#process">撮影の流れ</a></li>
+        <li><a href="reviews.html">お客様の声</a></li>
+        <li><a href="index.html#contact">ご予約・お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="section-eyebrow">Newborn Plan</div>
+  <h1 class="page-title">ニューボーンプラン</h1>
+  <p class="page-title-jp">生後28日頃までの、この瞬間だけの姿を永遠に</p>
+</div>
+
+<section class="plan-section">
+  <div class="container">
+
+    <div class="plan-grid">
+      <div class="plan-card">
+        <p class="plan-name">ミニ</p>
+        <p class="plan-tagline">今だけの姿をもっと手軽に</p>
+        <p class="plan-price">¥26,000<small>（税込）</small></p>
+        <hr class="plan-divider">
+        <ul class="plan-features">
+          <li>データ 25枚</li>
+          <li>撮影時間 約1.5時間</li>
+          <li>赤ちゃん単独パターン</li>
+          <li>選べる 1パターン</li>
+        </ul>
+      </div>
+
+      <div class="plan-card recommended">
+        <div class="recommended-badge">Recommended</div>
+        <p class="plan-name">ベーシック</p>
+        <p class="plan-tagline">ポーズや背景を存分に楽しみたい方に</p>
+        <p class="plan-price">¥33,000<small>（税込）</small></p>
+        <hr class="plan-divider">
+        <ul class="plan-features">
+          <li>データ 40枚</li>
+          <li>撮影時間 約2〜2.5時間</li>
+          <li>選べる 3パターン</li>
+        </ul>
+        <p class="coupon-note">★ 当日限定 1,000円グッズクーポン付</p>
+      </div>
+
+      <div class="plan-card">
+        <p class="plan-name">プラチナ</p>
+        <p class="plan-tagline">赤ちゃんの素顔をまるごと記念に</p>
+        <p class="plan-price">¥39,800<small>（税込）</small></p>
+        <hr class="plan-divider">
+        <ul class="plan-features">
+          <li>全てのデータ（60枚以上）</li>
+          <li>選べる 4パターン</li>
+        </ul>
+        <p class="coupon-note">★ 当日限定 3,000円グッズクーポン付</p>
+      </div>
+    </div>
+
+    <div class="common-section">
+      <p class="common-title">全プラン共通</p>
+      <ul class="common-features">
+        <li>出張撮影無料（ご自宅 or ご希望の場所）</li>
+        <li>家族撮影もOK（追加料金なし）</li>
+        <li>ご自宅を背景にした家族写真・パーツフォトもご希望があれば追加料金なしで撮影します</li>
+        <li>背景が白い逆光のお写真をご希望の場合は「家族ショット」をお選びください</li>
+        <li>ポージングをお伝えしながら一緒に進めていきます</li>
+      </ul>
+    </div>
+
+    <div class="options-section">
+      <p class="options-title">追加オプション</p>
+      <table class="options-table">
+        <tbody>
+          <tr><th>1パターン追加（10枚）</th><td>＋5,500円</td></tr>
+          <tr><th>休日撮影</th><td>＋5,500円</td></tr>
+          <tr><th>双子撮影</th><td>＋7,700円</td></tr>
+          <tr><th>ペット撮影</th><td>＋2,200円</td></tr>
+          <tr><th>生花</th><td>＋3,300円〜</td></tr>
+          <tr><th>アートタッチ仕上げ</th><td>1枚 ＋2,200円 ／ 5枚 ＋9,900円</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<div class="plan-cta">
+  <p>ご予約・お問い合わせはLINE公式アカウントよりお気軽にどうぞ</p>
+  <a href="https://lin.ee/pyeHEsZ" target="_blank" class="btn btn-filled">公式LINEで予約・相談する</a>
+</div>
+
+<footer>
+  <div class="footer-brand"><ruby>七彩<rt>なないろ</rt></ruby> Photo Works</div>
+  <div class="footer-social">
+    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 8h3V4h-3a4 4 0 00-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8a1 1 0 011-1z"/></svg></a>
+    <a href="#" aria-label="Mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7a2 2 0 012-2h14a2 2 0 012 2"/></svg></a>
+  </div>
+  <div class="copyright">&copy; 2026 七彩 Photo Works. All Rights Reserved.</div>
+</footer>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); });
+  const toggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  toggle.addEventListener('click', () => { toggle.classList.toggle('open'); navMenu.classList.toggle('open'); });
+  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { toggle.classList.remove('open'); navMenu.classList.remove('open'); }));
+</script>
+</body>
+</html>
