@@ -64,7 +64,10 @@
 
   /* Plan Grid – 3 columns */
   .plan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; align-items: start; }
-  .plan-card { background: #fff; border: 1px solid var(--color-line); padding: 2rem 1.5rem; position: relative; }
+  .plan-card { background: #fff; border: 1px solid var(--color-line); position: relative; overflow: hidden; }
+  .plan-photo { padding: 1rem 1rem 0; }
+  .plan-photo img { width: 80%; aspect-ratio: 1 / 1; object-fit: cover; display: block; margin: 0 auto; }
+  .plan-body { padding: 2rem 1.5rem; }
   .plan-card.recommended { border-color: var(--color-accent); }
   .recommended-badge { position: absolute; top: -1px; right: 1.5rem; background: var(--color-accent); color: #fff; font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.1em; padding: 0.3rem 0.8rem; }
   .plan-name { font-family: var(--font-serif-jp); font-size: 1.3rem; font-weight: 500; color: var(--color-accent); margin-bottom: 0.3rem; }
@@ -153,42 +156,57 @@
 
     <div class="plan-grid">
       <div class="plan-card">
-        <p class="plan-name">ミニ</p>
-        <p class="plan-tagline">今だけの姿をもっと手軽に</p>
-        <p class="plan-price">¥26,000<small>（税込）</small></p>
-        <hr class="plan-divider">
-        <ul class="plan-features">
-          <li>データ 25枚</li>
-          <li>撮影時間 約1.5時間</li>
-          <li>赤ちゃん単独パターン</li>
-          <li>選べる 1パターン</li>
-        </ul>
+        <div class="plan-photo">
+          <img src="images/Newborn_Plans/Newborn_mini_1.jpg" alt="ミニプラン">
+        </div>
+        <div class="plan-body">
+          <p class="plan-name">ミニ</p>
+          <p class="plan-tagline">今だけの姿をもっと手軽に</p>
+          <p class="plan-price">¥26,000<small>（税込）</small></p>
+          <hr class="plan-divider">
+          <ul class="plan-features">
+            <li>データ 25枚</li>
+            <li>撮影時間 約1.5時間</li>
+            <li>赤ちゃん単独パターン</li>
+            <li>選べる 1パターン＋おまかせ 1パターン</li>
+          </ul>
+        </div>
       </div>
 
       <div class="plan-card recommended">
         <div class="recommended-badge">人気No.1</div>
-        <p class="plan-name">ベーシック</p>
-        <p class="plan-tagline">ポーズや背景を存分に楽しみたい方に</p>
-        <p class="plan-price">¥33,000<small>（税込）</small></p>
-        <hr class="plan-divider">
-        <ul class="plan-features">
-          <li>データ 40枚</li>
-          <li>撮影時間 約2〜2.5時間</li>
-          <li>選べる 3パターン</li>
-        </ul>
-        <p class="coupon-note">★ 当日限定 1,000円グッズクーポン付</p>
+        <div class="plan-photo">
+          <img src="images/Newborn_Plans/Newborn_basic_2.jpg" alt="ベーシックプラン">
+        </div>
+        <div class="plan-body">
+          <p class="plan-name">ベーシック</p>
+          <p class="plan-tagline">ポーズや背景を存分に楽しみたい方に</p>
+          <p class="plan-price">¥33,000<small>（税込）</small></p>
+          <hr class="plan-divider">
+          <ul class="plan-features">
+            <li>データ 40枚</li>
+            <li>撮影時間 約2〜2.5時間</li>
+            <li>選べる 3パターン</li>
+          </ul>
+          <p class="coupon-note">★ 当日限定 1,000円グッズクーポン付</p>
+        </div>
       </div>
 
       <div class="plan-card">
-        <p class="plan-name">プラチナ</p>
-        <p class="plan-tagline">赤ちゃんの素顔をまるごと記念に</p>
-        <p class="plan-price">¥39,800<small>（税込）</small></p>
-        <hr class="plan-divider">
-        <ul class="plan-features">
-          <li>全てのデータ（60枚以上）</li>
-          <li>選べる 4パターン</li>
-        </ul>
-        <p class="coupon-note">★ 当日限定 3,000円グッズクーポン付</p>
+        <div class="plan-photo">
+          <img src="images/Newborn_Plans/Newborn_platinum_4.jpg" alt="プラチナプラン">
+        </div>
+        <div class="plan-body">
+          <p class="plan-name">プラチナ</p>
+          <p class="plan-tagline">赤ちゃんの素顔をまるごと記念に</p>
+          <p class="plan-price">¥39,800<small>（税込）</small></p>
+          <hr class="plan-divider">
+          <ul class="plan-features">
+            <li>全てのデータ（60枚以上）</li>
+            <li>選べる 4パターン</li>
+          </ul>
+          <p class="coupon-note">★ 当日限定 3,000円グッズクーポン付</p>
+        </div>
       </div>
     </div>
 
