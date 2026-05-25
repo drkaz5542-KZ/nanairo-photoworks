@@ -64,7 +64,10 @@
 
   /* Plan Grid */
   .plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
-  .plan-card { background: #fff; border: 1px solid var(--color-line); padding: 2.5rem 2rem; position: relative; }
+  .plan-card { background: #fff; border: 1px solid var(--color-line); position: relative; overflow: hidden; }
+  .plan-photo { padding: 1rem 1rem 0; }
+  .plan-photo img { width: 80%; aspect-ratio: 1 / 1; object-fit: cover; display: block; margin: 0 auto; }
+  .plan-body { padding: 2.5rem 2rem; }
   .plan-card.recommended { border-color: var(--color-accent); }
   .recommended-badge { position: absolute; top: -1px; left: 2rem; background: var(--color-accent); color: #fff; font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.1em; padding: 0.3rem 0.8rem; }
   .plan-name { font-family: var(--font-serif-jp); font-size: 1.4rem; font-weight: 500; color: var(--color-accent); margin-bottom: 0.3rem; }
@@ -157,30 +160,40 @@
 
     <div class="plan-grid">
       <div class="plan-card">
-        <p class="plan-name">ベーシック</p>
-        <p class="plan-tagline">自然体のまま、今を残す</p>
-        <p class="plan-price">¥26,000<small>（税込）</small></p>
-        <hr class="plan-divider">
-        <ul class="plan-features">
-          <li>データ 25枚</li>
-          <li>撮影時間 45分</li>
-          <li>ご自宅撮影</li>
-          <li>衣装 1着（自前）</li>
-        </ul>
+        <div class="plan-photo">
+          <img src="images/Newborn_Plans/Maternity_basic.jpg" alt="ベーシックプラン">
+        </div>
+        <div class="plan-body">
+          <p class="plan-name">ベーシック</p>
+          <p class="plan-tagline">自然体のまま、今を残す</p>
+          <p class="plan-price">¥26,000<small>（税込）</small></p>
+          <hr class="plan-divider">
+          <ul class="plan-features">
+            <li>データ 25枚</li>
+            <li>撮影時間 45分</li>
+            <li>ご自宅撮影</li>
+            <li>衣装 1着（自前）</li>
+          </ul>
+        </div>
       </div>
 
       <div class="plan-card recommended">
         <div class="recommended-badge">人気No.1</div>
-        <p class="plan-name">プレミアム</p>
-        <p class="plan-tagline">一生に一度を、最高の形に</p>
-        <p class="plan-price">¥32,800<small>（税込）</small></p>
-        <hr class="plan-divider">
-        <ul class="plan-features">
-          <li>全てのデータ 50枚以上</li>
-          <li>撮影時間 90分</li>
-          <li>ご自宅撮影</li>
-          <li>衣装 2着（貸ドレス＋自前）</li>
-        </ul>
+        <div class="plan-photo">
+          <img src="images/Newborn_Plans/Maternity_premium.jpg" alt="プレミアムプラン">
+        </div>
+        <div class="plan-body">
+          <p class="plan-name">プレミアム</p>
+          <p class="plan-tagline">一生に一度を、最高の形に</p>
+          <p class="plan-price">¥32,800<small>（税込）</small></p>
+          <hr class="plan-divider">
+          <ul class="plan-features">
+            <li>全てのデータ 50枚以上</li>
+            <li>撮影時間 90分</li>
+            <li>ご自宅撮影</li>
+            <li>衣装 2着（貸ドレス＋自前）</li>
+          </ul>
+        </div>
       </div>
     </div>
 
