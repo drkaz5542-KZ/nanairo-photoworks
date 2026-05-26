@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>よくある質問 | Nanairo Photoworks</title>
+<meta name="description" content="七彩 Photo Worksへのよくあるご質問をまとめました。ニューボーンフォト・マタニティフォトに関するご不明な点はこちらをご覧ください。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #faf7f2;
+    --color-bg-alt: #f2ece3;
+    --color-text: #3a332c;
+    --color-text-soft: #6b5f54;
+    --color-accent: #a88968;
+    --color-accent-dark: #8a6e4f;
+    --color-line: #e2d8ca;
+    --font-serif-en: 'EB Garamond', serif;
+    --font-serif-jp: 'Shippori Mincho', serif;
+    --max-width: 800px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-serif-jp); color: var(--color-text); background: var(--color-bg); line-height: 1.8; font-weight: 300; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; transition: opacity 0.3s ease; }
+  a:hover { opacity: 0.7; }
+
+  /* Header */
+  header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; background: rgba(250,247,242,0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color 0.3s ease, padding 0.3s ease; }
+  header.scrolled { border-bottom-color: var(--color-line); padding: 0.9rem 2rem; }
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-family: var(--font-serif-jp); font-size: 1.1rem; font-weight: 500; letter-spacing: 0.1em; }
+  .brand rt { font-size: 0.55em; letter-spacing: 0.05em; font-weight: 400; }
+  nav ul { list-style: none; display: flex; gap: 2.25rem; }
+  nav a { font-family: var(--font-serif-en); font-size: 0.78rem; letter-spacing: 0.2em; color: var(--color-text); text-transform: uppercase; }
+  nav a.current { color: var(--color-accent); }
+  .menu-toggle { display: none; background: none; border: none; cursor: pointer; width: 32px; height: 24px; position: relative; }
+  .menu-toggle span { position: absolute; left: 0; right: 0; height: 1px; background: var(--color-text); transition: all 0.3s ease; }
+  .menu-toggle span:nth-child(1) { top: 4px; }
+  .menu-toggle span:nth-child(2) { top: 12px; }
+  .menu-toggle span:nth-child(3) { top: 20px; }
+  .menu-toggle.open span:nth-child(1) { top: 12px; transform: rotate(45deg); }
+  .menu-toggle.open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.open span:nth-child(3) { top: 12px; transform: rotate(-45deg); }
+
+  /* Btn */
+  .btn { display: inline-block; padding: 1rem 2.5rem; font-family: var(--font-serif-en); font-size: 0.9rem; letter-spacing: 0.3em; text-transform: uppercase; border: 1px solid currentColor; background: transparent; cursor: pointer; transition: all 0.3s ease; }
+  .btn-filled { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+  .btn-filled:hover { background: var(--color-accent-dark); border-color: var(--color-accent-dark); color: #fff; opacity: 1; }
+
+  /* Page Hero */
+  .page-hero { padding: 130px 2rem 4rem; background: var(--color-bg); text-align: center; }
+  .section-eyebrow { font-family: var(--font-serif-en); font-size: 0.85rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 1rem; }
+  .page-title { font-family: var(--font-serif-en); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 400; margin-bottom: 0.5rem; letter-spacing: 0.02em; }
+  .page-title-jp { font-family: var(--font-serif-jp); font-size: 1rem; color: var(--color-text-soft); letter-spacing: 0.15em; }
+
+  /* FAQ Section */
+  .faq-section { padding: 3rem 2rem 6rem; }
+  .container { max-width: var(--max-width); margin: 0 auto; }
+
+  .faq-category { margin-bottom: 4rem; }
+  .faq-category:last-child { margin-bottom: 0; }
+
+  .category-label {
+    font-family: var(--font-serif-en);
+    font-size: 0.78rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+  }
+  .category-title {
+    font-family: var(--font-serif-jp);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-text);
+    letter-spacing: 0.1em;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-line);
+    margin-bottom: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--color-line);
+    padding: 1.6rem 0;
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .faq-q-mark {
+    font-family: var(--font-serif-en);
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    flex-shrink: 0;
+    margin-top: 0.05em;
+  }
+
+  .faq-question-text {
+    font-family: var(--font-serif-jp);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text);
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+  }
+
+  .faq-answer {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 0;
+  }
+
+  .faq-a-mark {
+    font-family: var(--font-serif-en);
+    font-size: 1.1rem;
+    color: var(--color-text-soft);
+    flex-shrink: 0;
+    margin-top: 0.05em;
+  }
+
+  .faq-answer-text p {
+    font-size: 0.9rem;
+    color: var(--color-text-soft);
+    line-height: 1.9;
+  }
+  .faq-answer-text p + p { margin-top: 0.75rem; }
+
+  .faq-answer-text .cancel-table {
+    margin-top: 0.75rem;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  .faq-answer-text .cancel-table th,
+  .faq-answer-text .cancel-table td {
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--color-line);
+    text-align: left;
+  }
+  .faq-answer-text .cancel-table th {
+    background: var(--color-bg-alt);
+    color: var(--color-text-soft);
+    font-weight: 400;
+  }
+  .faq-answer-text .cancel-table td {
+    color: var(--color-text);
+  }
+
+  /* CTA */
+  .faq-cta { text-align: center; padding: 3rem 2rem; background: var(--color-bg-alt); }
+  .faq-cta p { color: var(--color-text-soft); margin-bottom: 2rem; font-size: 0.95rem; }
+
+  /* Footer */
+  footer { background: #3a332c; color: #d6cfc5; padding: 4rem 2rem 2rem; text-align: center; }
+  .footer-brand { font-family: var(--font-serif-jp); font-size: 1.8rem; letter-spacing: 0.15em; color: #fff; margin-bottom: 0.5rem; }
+  .footer-brand rt { font-size: 0.5em; letter-spacing: 0.05em; opacity: 0.8; }
+  .footer-social { display: flex; justify-content: center; gap: 1.5rem; margin: 2rem 0; }
+  .footer-social a { width: 40px; height: 40px; border: 1px solid #6b5f54; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #d6cfc5; transition: all 0.3s ease; }
+  .footer-social a:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; opacity: 1; }
+  .footer-social svg { width: 18px; height: 18px; }
+  .copyright { font-family: var(--font-serif-en); font-size: 0.8rem; letter-spacing: 0.2em; opacity: 0.6; padding-top: 2rem; border-top: 1px solid #5a5148; margin-top: 2rem; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    nav ul { position: fixed; top: 60px; left: 0; right: 0; background: rgba(250,247,242,0.98); backdrop-filter: blur(10px); flex-direction: column; padding: 2rem; gap: 1.5rem; transform: translateY(-120%); transition: transform 0.4s ease; border-bottom: 1px solid var(--color-line); }
+    nav ul.open { transform: translateY(0); }
+    nav a { font-size: 1rem; letter-spacing: 0.08em; font-family: var(--font-serif-jp); }
+    .menu-toggle { display: block; }
+    .page-hero { padding: 100px 1.5rem 3rem; }
+    .faq-section { padding: 3rem 1.5rem 5rem; }
+  }
+  @media (max-width: 600px) {
+    .faq-answer-text .cancel-table th,
+    .faq-answer-text .cancel-table td { padding: 0.5rem 0.6rem; font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><ruby>七彩<rt>なないろ</rt></ruby> Photo Works</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="menu"><span></span><span></span><span></span></button>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="index.html#concept">About Me</a></li>
+        <li><a href="index.html#services">料金・プラン</a></li>
+        <li><a href="index.html#gallery">ギャラリー</a></li>
+        <li><a href="index.html#process">撮影の流れ</a></li>
+        <li><a href="index.html#voice">お客様の声</a></li>
+        <li><a href="faq.html" class="current">よくある質問</a></li>
+        <li><a href="index.html#contact">ご予約・お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="section-eyebrow">FAQ</div>
+  <h1 class="page-title">よくある質問</h1>
+  <p class="page-title-jp">撮影に関するご不明な点をまとめました</p>
+</div>
+
+<section class="faq-section">
+  <div class="container">
+
+    <!-- ニューボーンフォト -->
+    <div class="faq-category">
+      <div class="category-label">Newborn Photo</div>
+      <h2 class="category-title">ニューボーンフォト</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">いつ撮影するのがベストですか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>生後3週目頃までの撮影がおすすめです。</p>
+            <p>この時期は赤ちゃんが眠っている時間も長く、ニューボーンフォトらしい雰囲気を残しやすいタイミングです。産後の体調が落ち着いてから、早めにご相談ください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">安全面は大丈夫ですか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>はい、ご安心ください。撮影は助産師監修のもと、安全面に十分配慮して行っています。</p>
+            <p>担当カメラマンは育児経験のあるママカメラマンが中心で、赤ちゃんの体調や様子をこまめに確認しながら、無理のないペースで撮影いたします。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">ポーズ撮影は危なくないですか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>無理なポーズは行いません。</p>
+            <p>赤ちゃんの様子を最優先に、体勢やご機嫌を見ながら、できる範囲で安全に配慮してご提案します。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">撮影はどこで行いますか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>ご自宅への出張撮影となります。</p>
+            <p>産後間もないママと赤ちゃんにできるだけご負担が少ないよう、カメラマンが撮影に必要な小物などを持参してお伺いします。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">赤ちゃんが泣いたり寝なかったりしても大丈夫ですか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>はい、大丈夫です。</p>
+            <p>授乳やおむつ替え、抱っこなどの休憩をはさみながら、赤ちゃんのペースに合わせて撮影します。泣いている表情や起きているお顔も、今だけの大切な思い出になります。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">家族やきょうだいとの撮影もできますか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>はい、ご家族やごきょうだいとの撮影も可能です。</p>
+            <p>赤ちゃんだけでなく、ママ・パパとの抱っこ写真や、ごきょうだいとの自然なカットも大切に撮影いたします。<br>※プランによって撮影可能なパターン数が異なります。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">予約はいつ頃すればいいですか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>ご出産前のご予約がおすすめです。</p>
+            <p>出産予定日をもとにご予約いただき、ご出産後に実際の撮影日を調整します。産後は慌ただしくなりやすいため、早めのご相談をおすすめします。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">必要なものはありますか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>撮影に必要な小物などは、こちらでご用意いたします。</p>
+            <p>一緒に撮影したい思い出のアイテムや小物などがございましたら、ぜひご用意ください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">予約後のプラン変更は可能ですか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>はい、可能です。</p>
+            <p>ご希望や撮影内容に合わせてご相談いただけますので、変更をご希望の場合はお気軽にお問い合わせください。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- マタニティフォト -->
+    <div class="faq-category">
+      <div class="category-label">Maternity Photo</div>
+      <h2 class="category-title">マタニティフォト</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">マタニティフォトはいつ撮るのがおすすめですか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>妊娠8〜9ヶ月頃（32〜36週前後）がおすすめです。</p>
+            <p>お腹が一番大きくふっくらとした時期で、動きやすさも残っているタイミングです。体調の変化もございますので、余裕をもってご予約ください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">衣装はどうすればいいですか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>プランによってはレンタルドレスをご用意しております。自前の衣装もご使用いただけます。</p>
+            <p>お気に入りのワンピースや、パートナーとのリンクコーデなど、ご自由にお楽しみください。ご不明な点はお気軽にご相談ください。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 共通 -->
+    <div class="faq-category">
+      <div class="category-label">Common</div>
+      <h2 class="category-title">共通</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">部屋が狭くても撮影できますか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>はい、撮影可能です。</p>
+            <p>自然光の入る窓際など、少しのスペースがあれば撮影できます。お伺い後にお部屋の明るさやスペースを確認し、最適な場所をご提案します。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">写真データの納品はいつ頃になりますか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+            <p>通常、撮影から約1ヶ月でのお届けとなります。</p>
+            <p>お急ぎの場合はお急ぎ仕上げオプションもございますので、ご希望の際はお気軽にご相談ください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-mark">Q</span>
+          <span class="faq-question-text">キャンセル・日程変更はできますか？</span>
+        </div>
+        <div class="faq-answer">
+          <span class="faq-a-mark">A</span>
+          <div class="faq-answer-text">
+          <p>体調やご出産のタイミングに合わせてご対応いたしますので、まずはお気軽にご相談ください。キャンセル料については下記の通りです。</p>
+          <table class="cancel-table">
+            <tr>
+              <th>ご予約後72時間以内</th>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <th>出産予定日の2ヶ月前まで</th>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <th>出産予定日の2ヶ月前〜撮影日決定まで</th>
+              <td>撮影料金の50%</td>
+            </tr>
+            <tr>
+              <th>撮影日確定後〜当日</th>
+              <td>撮影料金の100%</td>
+            </tr>
+          </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="faq-cta">
+  <p>他にご不明な点がございましたら、お気軽にLINEよりご相談ください。</p>
+  <a href="https://lin.ee/pyeHEsZ" target="_blank" class="btn btn-filled">公式LINEで相談する</a>
+</div>
+
+<footer>
+  <div class="footer-brand"><ruby>七彩<rt>なないろ</rt></ruby> Photo Works</div>
+  <div class="footer-social">
+    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 8h3V4h-3a4 4 0 00-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8a1 1 0 011-1z"/></svg></a>
+    <a href="#" aria-label="Mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7a2 2 0 012-2h14a2 2 0 012 2"/></svg></a>
+  </div>
+  <div class="copyright">&copy; 2026 七彩 Photo Works. All Rights Reserved.</div>
+</footer>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); });
+  const toggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  toggle.addEventListener('click', () => { toggle.classList.toggle('open'); navMenu.classList.toggle('open'); });
+  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { toggle.classList.remove('open'); navMenu.classList.remove('open'); }));
+</script>
+</body>
+</html>
