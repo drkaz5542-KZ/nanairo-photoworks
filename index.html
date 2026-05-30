@@ -105,6 +105,14 @@
     font-weight: 500;
     letter-spacing: 0.1em;
     color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .brand-logo {
+    height: 40px;
+    width: auto;
+    display: block;
   }
   .brand rt {
     font-size: 0.55em;
@@ -864,7 +872,7 @@
 <!-- ===== Header ===== -->
 <header id="header">
   <div class="nav-inner">
-    <a href="#top" class="brand"><ruby>七彩<rt>なないろ</rt></ruby> Photo Works</a>
+    <a href="#top" class="brand"><img src="images/logo_flower.png" alt="" class="brand-logo"><ruby>七彩<rt>なないろ</rt></ruby> Photo Works</a>
     <button class="menu-toggle" id="menuToggle" aria-label="menu">
       <span></span><span></span><span></span>
     </button>
