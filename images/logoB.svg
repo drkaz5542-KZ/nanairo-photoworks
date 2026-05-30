@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <g stroke="#846f68" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Main stem -->
+    <path d="M50 92 C50 80 48 70 46 58" stroke-width="3"/>
+    <!-- Left branch -->
+    <path d="M46 58 C42 50 36 42 27 32" stroke-width="2.5"/>
+    <!-- Right branch -->
+    <path d="M46 58 C49 48 51 38 53 25" stroke-width="2.5"/>
+    <!-- Leaf -->
+    <path d="M48 74 C56 66 60 57 55 51 C51 57 47 67 48 74Z" stroke-width="2"/>
+    <!-- Left flower -->
+    <path d="M27 32 C19 28 14 20 20 14 C26 9 33 14 31 22" stroke-width="2.5"/>
+    <path d="M27 32 C21 38 14 36 14 28 C14 20 21 18 27 22" stroke-width="2.5"/>
+    <!-- Right flower -->
+    <path d="M53 25 C50 16 54 8 61 10 C67 12 67 20 62 24" stroke-width="2.5"/>
+    <path d="M53 25 C60 19 68 21 67 28 C66 34 58 34 55 28" stroke-width="2.5"/>
+  </g>
+</svg>
