@@ -1,0 +1,32 @@
+# 七彩 Photo Works robots.txt
+# すべての検索エンジン・AIクローラーにクロールを許可します
+
+User-agent: *
+Allow: /
+
+# AI検索エンジン（ChatGPT / Perplexity / Claude など）を明示的に許可
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://nanairo-photoworks.com/sitemap.xml

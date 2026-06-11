@@ -9,13 +9,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>七彩 Photo Works | 大阪・和歌山・兵庫 出張ニューボーン・マタニティフォト</title>
 <meta name="description" content="助産師監修のもと赤ちゃんの安全を最優先に、大阪・和歌山・兵庫へ出張。ニューボーンフォト・マタニティフォトでご家族の大切な瞬間を丁寧に残します。">
+<link rel="canonical" href="https://nanairo-photoworks.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="七彩 Photo Works">
+<meta property="og:title" content="七彩 Photo Works | 大阪・和歌山・兵庫 出張ニューボーン・マタニティフォト">
+<meta property="og:description" content="助産師監修のもと赤ちゃんの安全を最優先に、大阪・和歌山・兵庫へ出張。ニューボーンフォト・マタニティフォトでご家族の大切な瞬間を丁寧に残します。">
+<meta property="og:url" content="https://nanairo-photoworks.com/">
+<meta property="og:image" content="https://nanairo-photoworks.com/images/Top_1.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="七彩 Photo Works | 大阪・和歌山・兵庫 出張ニューボーン・マタニティフォト">
+<meta name="twitter:description" content="助産師監修のもと赤ちゃんの安全を最優先に、大阪・和歌山・兵庫へ出張。ニューボーンフォト・マタニティフォトでご家族の大切な瞬間を丁寧に残します。">
+<meta name="twitter:image" content="https://nanairo-photoworks.com/images/Top_1.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://nanairo-photoworks.com/#business",
   "name": "七彩 Photo Works",
+  "alternateName": "なないろフォトワークス",
   "description": "助産師監修のニューボーンフォト・マタニティフォト・ファミリーフォト専門の出張フォトグラファー。大阪・兵庫・和歌山へ出張。",
   "url": "https://nanairo-photoworks.com",
+  "image": "https://nanairo-photoworks.com/images/Top_1.jpg",
+  "logo": "https://nanairo-photoworks.com/images/logo.png",
+  "priceRange": "¥¥",
+  "knowsLanguage": "ja",
+  "sameAs": [
+    "https://www.instagram.com/nanairo_photo_works",
+    "https://note.com/amelia_newborn"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Nao",
+    "jobTitle": "助産師・フォトグラファー"
+  },
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ニューボーンフォト出張撮影", "serviceType": "ニューボーンフォト"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "マタニティフォト出張撮影", "serviceType": "マタニティフォト"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ファミリーフォト出張撮影", "serviceType": "ファミリーフォト"}}
+  ],
   "areaServed": [
     {"@type": "City", "name": "大阪市", "containedInPlace": {"@type": "State", "name": "大阪府"}},
     {"@type": "City", "name": "吹田市", "containedInPlace": {"@type": "State", "name": "大阪府"}},
@@ -23,9 +55,12 @@
     {"@type": "City", "name": "箕面市", "containedInPlace": {"@type": "State", "name": "大阪府"}},
     {"@type": "City", "name": "茨木市", "containedInPlace": {"@type": "State", "name": "大阪府"}},
     {"@type": "City", "name": "高槻市", "containedInPlace": {"@type": "State", "name": "大阪府"}},
+    {"@type": "City", "name": "和歌山市", "containedInPlace": {"@type": "State", "name": "和歌山県"}},
+    {"@type": "City", "name": "岩出市", "containedInPlace": {"@type": "State", "name": "和歌山県"}},
+    {"@type": "City", "name": "橋本市", "containedInPlace": {"@type": "State", "name": "和歌山県"}},
+    {"@type": "City", "name": "海南市", "containedInPlace": {"@type": "State", "name": "和歌山県"}},
     {"@type": "City", "name": "伊丹市", "containedInPlace": {"@type": "State", "name": "兵庫県"}},
-    {"@type": "City", "name": "尼崎市", "containedInPlace": {"@type": "State", "name": "兵庫県"}},
-    {"@type": "State", "name": "和歌山県"}
+    {"@type": "City", "name": "尼崎市", "containedInPlace": {"@type": "State", "name": "兵庫県"}}
   ]
 }
 </script>
@@ -165,6 +200,26 @@
   }
   .hero-overlay { display: none; }
   .hero-content { display: none; }
+  /* スライドショー直下の見出し（h1）。iPhone 15 など縦長スマホ最適化 */
+  .hero-heading {
+    text-align: center;
+    padding: 1.5rem 1.4rem 1.6rem;
+    background: var(--color-bg);
+  }
+  .hero-title {
+    font-family: var(--font-serif-jp);
+    font-weight: 500;
+    font-size: clamp(1.05rem, 5vw, 2.1rem);
+    line-height: 1.55;
+    letter-spacing: 0.04em;
+    color: var(--color-text);
+    margin: 0;
+  }
+  /* h1 を常に2行で表示（地名／サービス名） */
+  .hero-title .hero-loc,
+  .hero-title .hero-svc { display: block; }
+  .hero-title .hero-svc { margin-top: 0.2em; }
+  .hero-title .sep { display: none; }
   .carousel {
     position: relative;
     overflow: hidden;
@@ -912,6 +967,9 @@
 
 <!-- ===== Hero ===== -->
 <section class="hero" id="top">
+  <div class="hero-heading">
+    <h1 class="hero-title"><span class="hero-loc">大阪・和歌山・兵庫</span><span class="sep">｜</span><span class="hero-svc">助産師監修ニューボーンフォト</span></h1>
+  </div>
   <div class="carousel" id="heroCarousel">
     <div class="carousel-track" id="carouselTrack">
       <div class="carousel-slide"><img src="images/Top_1.jpg" alt="フォト 1"></div>
