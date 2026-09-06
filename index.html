@@ -528,6 +528,54 @@
     padding-top: 1.5rem;
     border-top: 1px solid var(--color-line);
   }
+  /* ===== Set Plan Card ===== */
+  .service-card-set {
+    grid-column: 1 / -1;
+    padding: 3rem 2rem;
+  }
+  .service-card-set h3 + .setplan-en {
+    font-family: var(--font-serif-en);
+    font-size: 1rem;
+    color: var(--color-text-soft);
+    letter-spacing: 0.05em;
+    margin-bottom: 1.2rem;
+  }
+  .service-card-set h3 {
+    font-family: var(--font-serif-jp);
+    font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 0.3rem;
+  }
+  .service-card-set .setplan-sub {
+    text-align: center;
+    min-height: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-soft);
+    margin-bottom: 1.5rem;
+  }
+  .service-card-set .setplan-price {
+    font-family: var(--font-serif-en);
+    font-size: 1.4rem;
+    color: var(--color-text);
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+  .service-card-set .setplan-price small {
+    font-family: var(--font-serif-jp);
+    font-size: 0.72rem;
+    color: var(--color-text-soft);
+  }
+  .service-card-set .btn {
+    padding: 0.75rem 1.875rem;
+    color: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+  }
+  .service-card-set .btn:hover {
+    background: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+    color: #fff;
+  }
   .service-card .price small {
     font-size: 0.75rem;
     color: var(--color-text-soft);
@@ -1035,7 +1083,7 @@
   <div class="container">
     <div class="section-eyebrow">Services</div>
     <h2 class="section-title">撮影メニュー</h2>
-    <p class="section-subtitle">ご家族のタイミングに合わせた、3つの撮影プランをご用意しております。</p>
+    <p class="section-subtitle">ご家族のタイミングに合わせた撮影プランをご用意しております。</p>
 
     <div class="services-grid">
       <div class="service-card reveal">
@@ -1063,6 +1111,14 @@
         <p>お宮参り・お食い初め・七五三など、特別な節目をご家族の大切な記念として残します。衣装・場所のご相談もお気軽に。</p>
         <div class="price"><small>Plan</small>¥22,800〜</div>
         <a href="plan-family.html" class="service-detail-link">詳細を見る →</a>
+      </div>
+
+      <div class="service-card service-card-set reveal">
+        <h3>はじまりフォトセット</h3>
+        <div class="setplan-en">Maternity + Newborn</div>
+        <p class="setplan-sub">マタニティとニューボーン、<br>ふたつの「はじまり」をひとつに</p>
+        <div class="setplan-price">¥59,800<small>（税込）</small></div>
+        <a href="plan-newborn.html#set" class="btn btn-dark">詳しく見る →</a>
       </div>
     </div>
   </div>
