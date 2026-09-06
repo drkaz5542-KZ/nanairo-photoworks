@@ -141,6 +141,21 @@
   .options-table th { background: var(--color-bg-alt); color: var(--color-text-soft); font-weight: 400; font-size: 0.8rem; letter-spacing: 0.05em; width: 60%; }
   .options-table td { color: var(--color-accent); font-family: var(--font-serif-en); font-size: 0.95rem; }
 
+  /* Set Plan */
+  .set-section { margin-bottom: 3rem; }
+  .set-heading { font-family: var(--font-serif-jp); font-size: 1.1rem; font-weight: 500; color: var(--color-text); text-align: center; margin-bottom: 0.5rem; }
+  .set-sub { font-size: 0.85rem; color: var(--color-accent); text-align: center; margin-bottom: 2rem; }
+  .set-card { background: var(--color-bg-alt); border: 1px solid var(--color-line); padding: 2.5rem 2.5rem 2rem; text-align: center; max-width: 480px; margin: 0 auto; }
+  .set-item { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-size: 0.95rem; color: var(--color-text); }
+  .set-item-price { font-family: var(--font-serif-en); font-size: 1.05rem; color: var(--color-text-soft); white-space: nowrap; }
+  .set-plus { font-size: 0.9rem; color: var(--color-accent); margin: 0.5rem 0; }
+  .set-regular { font-size: 0.85rem; color: var(--color-text-soft); margin-bottom: 0.6rem; }
+  .set-regular s { font-family: var(--font-serif-en); font-size: 1rem; opacity: 0.75; }
+  .set-total { font-family: var(--font-serif-en); font-size: 2.2rem; font-weight: 400; color: var(--color-accent); line-height: 1; }
+  .set-total small { font-size: 0.75rem; font-family: var(--font-serif-jp); color: var(--color-text-soft); }
+  .set-save { display: inline-block; margin-top: 1.2rem; font-size: 0.82rem; color: #fff; background: var(--color-accent); padding: 0.35rem 1.2rem; letter-spacing: 0.08em; }
+  .set-note { text-align: center; font-size: 0.78rem; color: var(--color-text-soft); margin-top: 1rem; }
+
   /* CTA */
   .plan-cta { text-align: center; padding: 3rem 2rem; background: var(--color-bg-alt); }
   .plan-cta p { color: var(--color-text-soft); margin-bottom: 2rem; font-size: 0.95rem; }
@@ -169,6 +184,8 @@
     .plan-section { padding: 3rem 1.5rem 4rem; }
     .common-section { padding: 1.5rem; }
     .options-table th, .options-table td { padding: 0.65rem 0.75rem; }
+    .set-card { padding: 2rem 1.5rem 1.5rem; }
+    .set-item { font-size: 0.88rem; }
   }
 </style>
 </head>
@@ -280,6 +297,21 @@
           <tr><th>アートレタッチ仕上げ</th><td>1枚 ＋2,200円 ／ 5枚 ＋9,900円</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <div class="set-section">
+      <p class="set-heading">はじまりフォトセット</p>
+      <p class="set-sub">マタニティとニューボーン、ふたつの「はじまり」をひとつに</p>
+      <div class="set-card">
+        <div class="set-item"><span>マタニティ　プレミアム</span><span class="set-item-price">¥32,800</span></div>
+        <div class="set-plus">＋</div>
+        <div class="set-item"><span>ニューボーン　ベーシック</span><span class="set-item-price">¥33,000</span></div>
+        <hr class="plan-divider">
+        <p class="set-regular">個別にご予約の場合 <s>¥65,800</s></p>
+        <p class="set-total">¥59,800<small>（税込）</small></p>
+        <p class="set-save">6,000円お得</p>
+      </div>
+      <p class="set-note">※土日祝の撮影は、各撮影につき別途 +5,500円（税込）を申し受けます</p>
     </div>
 
   </div>

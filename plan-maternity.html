@@ -131,15 +131,20 @@
   .common-features li { font-size: 0.88rem; color: var(--color-text-soft); padding-left: 1.2rem; position: relative; }
   .common-features li::before { content: '・'; position: absolute; left: 0; color: var(--color-accent); }
 
-  /* Set Bonus */
+  /* Set Plan */
   .set-section { margin-bottom: 3rem; }
   .set-heading { font-family: var(--font-serif-jp); font-size: 1.1rem; font-weight: 500; color: var(--color-text); text-align: center; margin-bottom: 0.5rem; }
   .set-sub { font-size: 0.85rem; color: var(--color-accent); text-align: center; margin-bottom: 2rem; }
-  .set-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-  .set-card { background: var(--color-bg-alt); border: 1px solid var(--color-line); padding: 2rem; text-align: center; }
-  .set-card-title { font-family: var(--font-serif-jp); font-size: 1rem; font-weight: 500; color: var(--color-accent); margin-bottom: 1rem; }
-  .set-card p { font-size: 0.88rem; color: var(--color-text-soft); line-height: 2; }
-  .set-card .highlight { color: var(--color-accent); font-weight: 500; }
+  .set-card { background: var(--color-bg-alt); border: 1px solid var(--color-line); padding: 2.5rem 2.5rem 2rem; text-align: center; max-width: 480px; margin: 0 auto; }
+  .set-item { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-size: 0.95rem; color: var(--color-text); }
+  .set-item-price { font-family: var(--font-serif-en); font-size: 1.05rem; color: var(--color-text-soft); white-space: nowrap; }
+  .set-plus { font-size: 0.9rem; color: var(--color-accent); margin: 0.5rem 0; }
+  .set-regular { font-size: 0.85rem; color: var(--color-text-soft); margin-bottom: 0.6rem; }
+  .set-regular s { font-family: var(--font-serif-en); font-size: 1rem; opacity: 0.75; }
+  .set-total { font-family: var(--font-serif-en); font-size: 2.2rem; font-weight: 400; color: var(--color-accent); line-height: 1; }
+  .set-total small { font-size: 0.75rem; font-family: var(--font-serif-jp); color: var(--color-text-soft); }
+  .set-save { display: inline-block; margin-top: 1.2rem; font-size: 0.82rem; color: #fff; background: var(--color-accent); padding: 0.35rem 1.2rem; letter-spacing: 0.08em; }
+  .set-note { text-align: center; font-size: 0.78rem; color: var(--color-text-soft); margin-top: 1rem; }
 
   /* Weekend note */
   .weekend-note { text-align: center; font-size: 0.82rem; color: var(--color-text-soft); margin-bottom: 3rem; padding: 1rem; border: 1px solid var(--color-line); }
@@ -169,7 +174,8 @@
   }
   @media (max-width: 600px) {
     .plan-grid { grid-template-columns: 1fr; }
-    .set-grid { grid-template-columns: 1fr; }
+    .set-card { padding: 2rem 1.5rem 1.5rem; }
+    .set-item { font-size: 0.88rem; }
     .plan-section { padding: 3rem 1.5rem 4rem; }
     .common-section { padding: 1.5rem; }
   }
@@ -256,18 +262,18 @@
     <div class="weekend-note">土日祝の撮影は +5,500円（税込）となります</div>
 
     <div class="set-section">
-      <p class="set-heading">マタニティ ＆ ニューボーンフォト 同時予約特典</p>
-      <p class="set-sub">2つを同時にご予約いただくと、うれしい特典をご用意しています</p>
-      <div class="set-grid">
-        <div class="set-card">
-          <p class="set-card-title">【 特典 A 】</p>
-          <p>ニューボーンフォトを<br>ベーシック → プラチナプランへ<br><span class="highlight">無料アップグレード</span><br>（8,500円相当）</p>
-        </div>
-        <div class="set-card">
-          <p class="set-card-title">【 特典 B 】</p>
-          <p>裸ん坊 or お布団ラグ撮影<br>（J/K/Pパターン・5,500円相当）<br>＋<br>パネル・アルバムに使える<br><span class="highlight">2,000円グッズクーポン</span><br>（合計 7,500円相当）</p>
-        </div>
+      <p class="set-heading">はじまりフォトセット</p>
+      <p class="set-sub">マタニティとニューボーン、ふたつの「はじまり」をひとつに</p>
+      <div class="set-card">
+        <div class="set-item"><span>マタニティ　プレミアム</span><span class="set-item-price">¥32,800</span></div>
+        <div class="set-plus">＋</div>
+        <div class="set-item"><span>ニューボーン　ベーシック</span><span class="set-item-price">¥33,000</span></div>
+        <hr class="plan-divider">
+        <p class="set-regular">個別にご予約の場合 <s>¥65,800</s></p>
+        <p class="set-total">¥59,800<small>（税込）</small></p>
+        <p class="set-save">6,000円お得</p>
       </div>
+      <p class="set-note">※土日祝の撮影は、各撮影につき別途 +5,500円（税込）を申し受けます</p>
     </div>
 
   </div>
