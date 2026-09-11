@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー | 七彩 Photo Works</title>
+<meta name="description" content="七彩 Photo Works の個人情報の取り扱いについて。お預かりする情報の種類と利用目的、撮影した写真データの取り扱い方針をご案内します。">
+<link rel="canonical" href="https://nanairo-photoworks.com/privacy-policy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #faf7f2;
+    --color-bg-alt: #f2ece3;
+    --color-text: #3a332c;
+    --color-text-soft: #6b5f54;
+    --color-accent: #a88968;
+    --color-accent-dark: #8a6e4f;
+    --color-line: #e2d8ca;
+    --font-serif-en: 'EB Garamond', serif;
+    --font-serif-jp: 'Shippori Mincho', serif;
+    --max-width: 1200px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-serif-jp); color: var(--color-text); background: var(--color-bg); line-height: 1.9; font-weight: 300; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; transition: opacity 0.3s ease; }
+  a:hover { opacity: 0.7; }
+  :focus-visible { outline: 2px solid var(--color-accent-dark); outline-offset: 3px; }
+
+  header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; background: rgba(250,247,242,0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color 0.3s ease, padding 0.3s ease; }
+  header.scrolled { border-bottom-color: var(--color-line); padding: 0.9rem 2rem; }
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-family: var(--font-serif-jp); font-size: 1.1rem; font-weight: 500; letter-spacing: 0.1em; }
+  .brand rt { font-size: 0.55em; letter-spacing: 0.05em; font-weight: 400; }
+  nav ul { list-style: none; display: flex; gap: 2.25rem; }
+  nav a { font-family: var(--font-serif-en); font-size: 0.78rem; letter-spacing: 0.2em; color: var(--color-text); text-transform: uppercase; }
+  .menu-toggle { display: none; background: none; border: none; cursor: pointer; width: 32px; height: 24px; position: relative; }
+  .menu-toggle span { position: absolute; left: 0; right: 0; height: 1px; background: var(--color-text); transition: all 0.3s ease; }
+  .menu-toggle span:nth-child(1) { top: 4px; }
+  .menu-toggle span:nth-child(2) { top: 12px; }
+  .menu-toggle span:nth-child(3) { top: 20px; }
+  .menu-toggle.open span:nth-child(1) { top: 12px; transform: rotate(45deg); }
+  .menu-toggle.open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.open span:nth-child(3) { top: 12px; transform: rotate(-45deg); }
+
+  .page-hero { padding: 130px 2rem 2.5rem; text-align: center; }
+  .section-eyebrow { font-family: var(--font-serif-en); font-size: 0.85rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 1rem; }
+  .page-title { font-family: var(--font-serif-jp); font-size: clamp(1.35rem, 3.2vw, 1.8rem); font-weight: 500; letter-spacing: 0.05em; }
+
+  .legal { padding: 2rem 2rem 5rem; }
+  .legal-inner { max-width: 780px; margin: 0 auto; }
+  .legal-intro { font-size: 0.95rem; margin-bottom: 2.5rem; }
+  .legal h2 { font-family: var(--font-serif-jp); font-size: 1.05rem; font-weight: 500; margin: 2.75rem 0 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--color-line); letter-spacing: 0.04em; }
+  .legal h2 .num { font-family: var(--font-serif-en); font-size: 0.85em; color: var(--color-accent); margin-right: 0.6rem; }
+  .legal h3 { font-family: var(--font-serif-jp); font-size: 0.96rem; font-weight: 500; color: var(--color-accent-dark); margin: 1.75rem 0 0.7rem; letter-spacing: 0.03em; }
+  .legal p { font-size: 0.94rem; margin-bottom: 1rem; }
+  .legal ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; }
+  .legal li { position: relative; padding-left: 1.2rem; font-size: 0.94rem; }
+  .legal li::before { content: ''; position: absolute; left: 0; top: 0.8em; width: 5px; height: 5px; background: var(--color-accent); border-radius: 50%; }
+  .legal-updated { font-size: 0.82rem; color: var(--color-text-soft); margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-line); }
+
+
+  footer { background: #3a332c; color: #d6cfc5; padding: 4rem 2rem 2rem; text-align: center; }
+  .footer-brand { font-family: var(--font-serif-jp); font-size: clamp(1.15rem, 5vw, 1.8rem); letter-spacing: 0.15em; color: #fff; margin-bottom: 0.5rem; }
+  .footer-brand rt { font-size: 0.5em; letter-spacing: 0.05em; opacity: 0.8; }
+  .footer-guide { margin-top: 1.25rem; font-size: 0.82rem; letter-spacing: 0.05em; }
+  .footer-guide a { color: #d6cfc5; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #6b5f54; }
+  .footer-guide a { display: inline-block; }
+  .footer-sep { opacity: 0.35; margin: 0 0.7rem; }
+  @media (max-width: 600px) { .footer-sep { display: none; } .footer-guide a { display: block; margin: 0.3rem 0; } }
+  .copyright { font-family: var(--font-serif-en); font-size: 0.8rem; letter-spacing: 0.2em; opacity: 0.6; padding-top: 2rem; border-top: 1px solid #5a5148; margin-top: 2rem; }
+
+  @media (max-width: 900px) {
+    nav ul { position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background: var(--color-bg); flex-direction: column; justify-content: center; align-items: center; gap: 2.5rem; transition: right 0.4s ease; z-index: 99; }
+    nav ul.open { right: 0; }
+    .menu-toggle { display: block; z-index: 100; }
+    .page-hero { padding: 100px 1.5rem 2rem; }
+  }
+  @media (max-width: 600px) {
+    .legal { padding: 1.5rem 1.5rem 4rem; }
+    .legal p, .legal li { font-size: 0.92rem; }
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><ruby>七彩<rt>なないろ</rt></ruby> Photo Works</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="menu"><span></span><span></span><span></span></button>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="index.html#concept">About Me</a></li>
+        <li><a href="index.html#services">料金・プラン</a></li>
+        <li><a href="index.html#gallery">ギャラリー</a></li>
+        <li><a href="index.html#process">撮影の流れ</a></li>
+        <li><a href="reviews.html">お客様の声</a></li>
+        <li><a href="index.html#contact">ご予約・お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="section-eyebrow">Privacy Policy</div>
+  <h1 class="page-title">プライバシーポリシー</h1>
+</div>
+
+<section class="legal">
+  <div class="legal-inner">
+
+    <p class="legal-intro">七彩 Photo Works（以下「当方」）は、撮影サービスの提供にあたってお客様からお預かりする個人情報および写真データを、大切にお取り扱いいたします。本ポリシーでは、その方針をご案内します。</p>
+
+    <h2><span class="num">01</span>お預かりする情報</h2>
+    <p>撮影のご予約・ご相談・サービスの提供にあたり、次の情報をお預かりします。</p>
+    <ul>
+      <li>お名前</li>
+      <li>ご連絡先（LINEアカウント上の表示名・トーク内容など）</li>
+      <li>撮影場所のご住所</li>
+      <li>お子さまの出産予定日または生年月日</li>
+      <li>撮影した写真データ</li>
+      <li>フォトグッズをご注文いただいた場合は、お届け先のご住所・お電話番号</li>
+    </ul>
+
+    <h2><span class="num">02</span>利用目的</h2>
+    <p>お預かりした情報は、次の目的でのみ利用します。</p>
+    <ul>
+      <li>撮影サービスのご提供および、それに関するご連絡</li>
+      <li>撮影日程の調整、当日の訪問</li>
+      <li>撮影データのお渡し</li>
+      <li>フォトグッズの製作およびお届け</li>
+      <li>撮影後のアンケートのお願い、サービス改善のための分析</li>
+    </ul>
+
+    <h2><span class="num">03</span>撮影した写真の取り扱い</h2>
+    <p>お撮りした写真は、お客様とお子さまの大切な記録です。次のとおり取り扱います。</p>
+
+    <h3>ホームページ・SNSへの掲載について</h3>
+    <p>ホームページ、Instagram、撮影事例などへの掲載は、<strong>必ず事前にお客様の許可をいただいたうえで行っています。許可をいただいていない方のお写真は、SNSを含め一切掲載いたしません。</strong></p>
+    <p>掲載をお断りいただいても、撮影の内容や納品するお写真が変わることはありません。どうぞご遠慮なくお申しつけください。</p>
+    <p>一度ご許可いただいたあとでも、<strong>掲載の取り下げをご希望の場合は対応いたします。</strong>お気軽にご連絡ください。</p>
+
+    <h3>撮影データの保管について</h3>
+    <p>お渡しした撮影データは、<strong>お渡しから約3ヶ月間</strong>、当方でも保管しています。この期間内であれば、データを紛失された場合などの再送にも対応いたします。</p>
+    <p>約3ヶ月を過ぎますと再送ができなくなりますので、お受け取りになりましたら、<strong>お早めにパソコンや外部ストレージなどへ保存してくださいますよう</strong>お願いいたします。</p>
+
+    <h2><span class="num">04</span>第三者への提供</h2>
+    <p>法令に基づく場合を除き、お預かりした情報をお客様の同意なく第三者に提供することはありません。</p>
+    <p>ただし、次の場合には、業務上必要な範囲に限り情報を共有します。いずれの場合も、目的外の利用や二次利用は行いません。</p>
+    <ul>
+      <li>撮影を委託するフォトグラファーへの、撮影日時・撮影場所・ご連絡事項の共有</li>
+      <li>フォトグッズ製作会社への、製作および配送に必要な情報の提供</li>
+    </ul>
+
+    <h2><span class="num">05</span>安全管理</h2>
+    <p>お預かりした個人情報および写真データは、不正なアクセス・紛失・漏えいが起きないよう、必要な安全管理措置を講じて取り扱います。</p>
+
+    <h2><span class="num">06</span>本サイトについて</h2>
+    <p>当サイトでは、アクセス解析ツールや広告配信のためのCookieは使用していません。</p>
+    <p>ページの表示にあたり Google Fonts を読み込んでいます。この際、フォントの配信元であるGoogle社にお客様のIPアドレスなどの情報が送信されます。詳しくはGoogle社のプライバシーポリシーをご確認ください。</p>
+
+    <h2><span class="num">07</span>開示・訂正・削除のご請求</h2>
+    <p>お預かりしている情報の開示・訂正・削除をご希望の場合は、下記の窓口までご連絡ください。ご本人であることを確認のうえ、速やかに対応いたします。</p>
+
+    <h2><span class="num">08</span>お問い合わせ窓口</h2>
+    <p>個人情報および写真の取り扱いについてのご質問・ご請求は、下記までお願いいたします。</p>
+    <p>七彩 Photo Works（なないろ フォトワークス）<br>
+    代表：Nao<br>
+    ご連絡先：LINE公式アカウント（<a href="https://lin.ee/pyeHEsZ" target="_blank" rel="noopener">https://lin.ee/pyeHEsZ</a>）</p>
+
+    <h2><span class="num">09</span>本ポリシーの改定</h2>
+    <p>本ポリシーの内容は、必要に応じて変更することがあります。変更した場合は、当ページに掲載した時点から適用されます。</p>
+
+    <p class="legal-updated">制定日：2026年9月12日</p>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand"><ruby>七彩<rt>なないろ</rt></ruby> Photo Works</div>
+  <div class="footer-guide"><a href="guide-newborn-photo-how-to-choose.html">ニューボーンフォトの選び方ガイド</a><span class="footer-sep">|</span><a href="privacy-policy.html">プライバシーポリシー</a></div>
+  <div class="copyright">&copy; 2026 七彩 Photo Works. All Rights Reserved.</div>
+</footer>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); });
+  const toggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  toggle.addEventListener('click', () => { toggle.classList.toggle('open'); navMenu.classList.toggle('open'); });
+  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { toggle.classList.remove('open'); navMenu.classList.remove('open'); }));
+</script>
+
+</body>
+</html>
